@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Automation Engineering — Production Agent Systems, Built & Operated</title>
+  <meta name="description" content="I design, build, and operate production AI agent systems: workflow automation, custom agents, MCP servers, and reliability audits. Everything I sell, I run myself 24/7.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+  <!-- Hero -->
+  <header class="max-w-4xl mx-auto px-6 pt-20 pb-12">
+    <p class="text-emerald-400 font-mono text-sm mb-4">// production AI automation, not demos</p>
+    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+      I build AI agent systems that run unattended —<br class="hidden md:block">
+      because mine already do.
+    </h1>
+    <p class="mt-6 text-lg text-slate-400 max-w-2xl">
+      Solo engineer operating a fleet of <strong class="text-slate-200">15+ machines across 5 regions</strong>,
+      kept healthy by LLM-driven automation: self-healing alerts, autonomous code-and-verify pipelines,
+      and multi-agent orchestration with zero daily babysitting.
+      I package that operational experience into services for teams that need AI automation
+      to <em>actually survive production</em>.
+    </p>
+    <div class="mt-8 flex gap-4">
+      <a href="#services" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-6 py-3 rounded-lg">Services & pricing</a>
+      <a href="#cases" class="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg">Case studies</a>
+    </div>
+  </header>
+
+  <!-- Proof bar -->
+  <section class="border-y border-slate-800 bg-slate-900/50">
+    <div class="max-w-4xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><p class="text-2xl font-bold text-white">24/7</p><p class="text-sm text-slate-400">unattended agent ops</p></div>
+      <div><p class="text-2xl font-bold text-white">130+</p><p class="text-sm text-slate-400">monitored service modules</p></div>
+      <div><p class="text-2xl font-bold text-white">50+</p><p class="text-sm text-slate-400">concurrent AI sessions coordinated</p></div>
+      <div><p class="text-2xl font-bold text-white">5 yrs+</p><p class="text-sm text-slate-400">full-stack & infra engineering</p></div>
+    </div>
+  </section>
+
+  <!-- Case studies -->
+  <section id="cases" class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-white mb-2">Case studies</h2>
+    <p class="text-slate-400 mb-10">All systems below are my own production infrastructure. Details are anonymized; architecture walk-throughs available on a call.</p>
+
+    <div class="space-y-10">
+      <article class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+        <p class="text-emerald-400 font-mono text-xs mb-2">CASE 01 · SELF-HEALING OPERATIONS</p>
+        <h3 class="text-xl font-semibold text-white mb-3">LLM-triaged alerting platform that fixes itself first</h3>
+        <p class="text-slate-400 mb-4">
+          A central alert pipeline ingests email, probe, and heartbeat signals from a multi-region fleet,
+          classifies severity with an LLM, auto-remediates known failure classes (service restarts, disk
+          cleanup, stale-data refresh), and only escalates genuine P0/P1 incidents to a human — with a
+          human-in-the-loop web UI for everything ambiguous.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-1 list-disc list-inside">
+          <li>Watchdogs with two-strike confirmation gates to kill false-positive pages</li>
+          <li>Every remediation logged with verify + rollback steps, auditable per incident</li>
+          <li>Stack: Python, FastAPI, systemd, IMAP ingestion, LLM gateway with multi-model routing</li>
+        </ul>
+      </article>
+
+      <article class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+        <p class="text-emerald-400 font-mono text-xs mb-2">CASE 02 · AUTONOMOUS CODE-AND-VERIFY</p>
+        <h3 class="text-xl font-semibold text-white mb-3">Live-stream pipeline: audience request → AI writes code → headless browser verifies → auto-publish</h3>
+        <p class="text-slate-400 mb-4">
+          For a live coding-stream format, viewer requests are bridged from chat to a coding agent that
+          builds the requested mini-app on the spot. A headless browser then runs acceptance checks
+          against the artifact before it is published to a public gallery — fully unattended, with
+          monitoring and auto-restart around every leg of the pipeline.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-1 list-disc list-inside">
+          <li>End-to-end: chat ingestion → agent execution → E2E acceptance → publish</li>
+          <li>Guardrail hooks block credential/PII exposure before anything goes on screen</li>
+          <li>Stack: Node.js, WebSocket bridge, Claude-based coding agent, Playwright-style headless verification</li>
+        </ul>
+      </article>
+
+      <article class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+        <p class="text-emerald-400 font-mono text-xs mb-2">CASE 03 · MULTI-AGENT ORCHESTRATION</p>
+        <h3 class="text-xl font-semibold text-white mb-3">Coordination layer for 50+ concurrent AI sessions without collisions</h3>
+        <p class="text-slate-400 mb-4">
+          When many AI agents work the same infrastructure, they overwrite each other. I built a
+          coordination service — atomic compare-and-swap claims, leases with TTL, fencing tokens, and a
+          cross-session handoff inbox — so dozens of concurrent agent sessions share machines, files, and
+          tasks safely. Compliance hooks enforce documentation and changelog discipline automatically.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-1 list-disc list-inside">
+          <li>Atomic task claiming: no duplicated work, no clobbered files, audit trail per session</li>
+          <li>Knowledge base + RAG so every new agent session cold-starts with full operational context</li>
+          <li>Stack: Python, CAS/lease service, git-backed knowledge vault, embedding search</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold text-white mb-2">Services & pricing</h2>
+      <p class="text-slate-400 mb-10">Fixed-scope where possible, async-first delivery, every engagement ends with monitoring + runbook so it keeps working after I leave.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800">
+          <h3 class="font-semibold text-white">AI workflow automation</h3>
+          <p class="text-sm text-slate-400 mt-2">Turn a repetitive business process (email triage, reporting, ticket routing, data pipelines) into an LLM-powered automation with monitoring.</p>
+          <p class="mt-4 text-emerald-400 font-mono text-sm">from $1,500 fixed-scope</p>
+        </div>
+        <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800">
+          <h3 class="font-semibold text-white">Custom agents & chatbots</h3>
+          <p class="text-sm text-slate-400 mt-2">Customer-support bots, lead qualifiers, internal knowledge-base QA — deployed, instrumented, and kept alive under a monthly care plan.</p>
+          <p class="mt-4 text-emerald-400 font-mono text-sm">from $2,500 build + $300/mo care</p>
+        </div>
+        <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800">
+          <h3 class="font-semibold text-white">Custom MCP server development</h3>
+          <p class="text-sm text-slate-400 mt-2">Connect your internal systems to Claude and the agent ecosystem via Model Context Protocol — schema design, auth, deployment.</p>
+          <p class="mt-4 text-emerald-400 font-mono text-sm">$85–120/hr or fixed quote</p>
+        </div>
+        <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800">
+          <h3 class="font-semibold text-white">Agent system audit & hardening</h3>
+          <p class="text-sm text-slate-400 mt-2">Already running agents? I audit reliability, cost, and failure modes against patterns from my own 24/7 fleet, and deliver a prioritized hardening plan.</p>
+          <p class="mt-4 text-emerald-400 font-mono text-sm">from $5,000 per audit</p>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-slate-500">Not taken on: crypto/exchange-related projects, anything requiring synchronous 9-to-5 availability in US hours (async-first with overlap windows works great).</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-2xl font-bold text-white mb-4">Work with me</h2>
+    <p class="text-slate-400 mb-6">Tell me the process you want automated and what "done" looks like. I reply with a diagnosis, a fixed scope, and a price.</p>
+    <div class="flex justify-center gap-4">
+      <a href="CONTACT_EMAIL_PLACEHOLDER" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-6 py-3 rounded-lg">Email me</a>
+      <a href="UPWORK_PROFILE_PLACEHOLDER" class="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg">Hire on Upwork</a>
+    </div>
+    <p class="mt-10 text-xs text-slate-600">© 2026 · AI Automation Engineering · All case-study systems are my own production infrastructure.</p>
+  </footer>
+
+</body>
+</html>
